@@ -28,7 +28,7 @@ function main() {
 			return;
 		}
 
-		Promise.resolve(updateProject(process.argv[3]));
+		updateProject(process.argv[3]);
 	}
 	else if (command_type === "delete") {
 		if (process.argv.length < 4) {
@@ -36,7 +36,7 @@ function main() {
 			return;
 		}
 
-		Promise.resolve(deleteProject(process.argv[3]));
+		deleteProject(process.argv[3]);
 	}
 	else {
 		console.log("Invalid invocation: args are update, delete or get");
